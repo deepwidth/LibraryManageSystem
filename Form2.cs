@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
                 string getNum = "select Amount from book where ID = '" + textBoxReturn.Text + "';";
                 cmd = new MySqlCommand(getNum, conn);
                 string num = cmd.ExecuteScalar().ToString();
-                string update = "delete from Ub where Uno = '" + Form1.userid + "' and id = '" + textBoxReturn.Text + "';" + "update book set Amount = '" + (Convert.ToInt32(num) + 1).ToString() + "' where id = '" + textBoxID.Text + "'; ";
+                string update = "delete from Ub where Uno = '" + Form1.userid + "' and id = '" + textBoxReturn.Text + "';" + "update book set Amount = '" + (Convert.ToInt32(num) + 1).ToString() + "' where id = '" + textBoxReturn.Text + "'; ";
                 cmd = new MySqlCommand(update, conn);
                 try
                 {
